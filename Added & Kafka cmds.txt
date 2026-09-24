@@ -1,0 +1,18 @@
+@nisarav @mrb @aspilla the notification service is done....
+backend in addedFeatures branch and frontend in withNotification branch...
+
+make sure you have 2 outbox tables and kafka ready for the backend to run
+
+
+
+Kafka commands:
+docker run -d --name project -p 127.0.0.1:9092:9092 apache/kafka:4.3.1
+docker exec project /opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --if-not-exists --topic user.lifecycle.v1 --partitions 1 --replication-factor 1
+
+docker exec project /opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --if-not-exists --topic payments.completed.v1 --partitions 1 --replication-factor 1
+
+docker start project
+
+then start.bat.....configure .env in the folder where .bat file is there
+
+only pull... any push and ill kill you
