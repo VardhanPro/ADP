@@ -1,0 +1,12 @@
+ISSUES
+------
+IntegrationBranch:
+No issues
+
+Users-features-Kafka:
+1) While adding A2W #Transaction_ID is coming : "Add funds transaction #23: COMPLETED."
+
+addedFeatures:
+1) In the .env of the added-features the kafka port is given "9093" and while kafka is being started the port is different, i.e. "9092", need to update it to correct value : "KAFKA_BOOTSTRAP_SERVERS=localhost:9093 -> docker run -d --name project -p 127.0.0.1:9092:9092 apache/kafka:4.3.1"
+2) While adding A2W #Transaction_ID is coming : "Add funds transaction #43: COMPLETED."
+3) Also u need to have notifications table too along with 2 outbox tables.
